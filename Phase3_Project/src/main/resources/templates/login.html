@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Login</h1>
+	<p th:if="${errorMessage}" style="color:red;">[[${errorMessage}]]
+	<form th:action = "@{/admin/login}" method=post>
+	Email: <input type="text" name="email" required>
+	<br>
+	Password: <input type="password" name="password" required>
+	
+	<br>
+	<button type="submit">Login</button>
+	
+	<a th:href="@{/admin/changepassword}">Change password</a>
+	
+	
+	
+		
+	</form>
+
+</body>
+</html>

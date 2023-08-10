@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome, Admin</h1>
+	
+	<a th:href="@{/admin/logout}">Logout</a>
+	
+	<!-- Admin links -->
+	<ul>
+		<li><a th:href="@{/admin/manageproducts}">Products</a></li>
+		<li><a th:href="@{/admin/manageusers}">Users</a></li>
+		<li><a th:href="@{/admin/purchasereports}">Purchase Reports</a></li>
+		
+	
+	</ul>
+
+</body>
+</html>

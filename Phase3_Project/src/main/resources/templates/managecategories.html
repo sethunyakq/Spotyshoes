@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Manage Categories</h1>
+	
+	<ul>
+	
+		<li th:each="category: ${categories}">
+			<a th:href = "@{/admin/productsbycategory/{category}(category=${category})}" th:text = "${category}"></a> 
+	</li>
+	
+	</ul>
+	<br>
+<a th:href="@{/admin/manageproducts}">Back to Manage Products</a>
+</body>
+</html>

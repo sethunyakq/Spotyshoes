@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Manage Users</h1>
+	
+	<!-- Searh user -->
+	<form th:action="@{/admin/searchUser}" method="post">
+		<input type="text" name="keyword" placeholder = "Search user...">
+		<button type="submit">Search</button>
+	
+	</form>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>User Name</th>				
+				
+			</tr>		
+		</thead>
+		<tbody>
+			<tr th:each="user : ${users}">
+				<td th:text="${user.id}"></td>
+				<td th:text="${user.username}"></td>
+				
+		</tbody>
+	
+	</table>
+<a th:href="@{/admin/dashboard}">Back to Admin Dashboard</a>
+</body>
+</html>
